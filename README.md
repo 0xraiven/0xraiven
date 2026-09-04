@@ -12,6 +12,8 @@
   <sub>Dissecting attack surfaces down to daemon and initialization vectors to engineer inspectable, high-resilience security systems.</sub>
 </p>
 
+<br>
+
 <img src="assets/divider.svg" width="100%" alt="divider" />
 
 </div>
