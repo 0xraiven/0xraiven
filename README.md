@@ -1,16 +1,20 @@
 <div align="center">
 
-<!-- HERO BANNER (ANIMATED TERMINAL IDENTITY) -->
+<p align="left"><img src="assets/profile-views.svg" alt="Profile Ingress Telemetry &amp; Views"/></p>
 <img src="assets/hero.svg" width="100%" alt="r41n // 0xraiven — Offensive Security · Security Engineering · Cloud" />
-
-<img src="assets/divider.svg" width="100%" alt="divider" />
 
 <!-- MINIMAL ANIMATED TELEMETRY STREAM COMPONENT -->
 <img src="assets/status-ticker.svg" width="100%" alt="Live Telemetry Stream" />
+<img src="assets/divider.svg" width="100%" alt="divider" />
+
+<p align="center">
+  <b>Cybersecurity researcher &amp; systems engineer</b> exploring <b>offensive primitives</b>, <b>Linux host telemetry</b>, and <b>explainable detection pipelines</b>.<br/>
+  <sub>Dissecting attack surfaces down to daemon and initialization vectors to engineer inspectable, high-resilience security systems.</sub>
+</p>
 
 </div>
 
-### ┌─[ FEATURED WORK ]────────────────────────────────────────────────────────
+### ┌─[ FEATURED WORK ]───────────────────────────────────────────────────
 
 <table>
   <tr>
@@ -41,7 +45,7 @@
   </tr>
 </table>
 
-### ┌─[ REAL TELEMETRY ]───────────────────────────────────────────────────────
+### ┌─[ TELEMETRY ]───────────────────────────────────────────────────────
 
 <table>
   <tr>
@@ -69,6 +73,9 @@
     <img src="https://img.shields.io/badge/GitHub-0xraiven-8B1E3F?style=flat-square&logo=github&logoColor=white&labelColor=09090B" alt="GitHub"/>
   </a>
 </p>
+
+<!-- INVISIBLE REALTIME INGRESS TELEMETRY TRIGGER -->
+<img src="https://komarev.com/ghpvc/?username=0xraiven" width="0" height="0" alt="" />
 
 <!--
   [CONFIGURABLE HOOKS FOR FUTURE PROFILES]

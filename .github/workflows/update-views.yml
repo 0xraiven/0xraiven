@@ -1,0 +1,55 @@
+name: Update Profile Views
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # Run every 30 minutes
+  workflow_dispatch: # Allow manual one-click trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-views:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Latest View Count & Update SVG
+        run: |
+          python3 -c "
+          import urllib.request, re
+
+          url = 'https://komarev.com/ghpvc/?username=0xraiven'
+          req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+          try:
+              with urllib.request.urlopen(req, timeout=10) as r:
+                  html = r.read().decode('utf-8')
+                  matches = re.findall(r'>([0-9,]+)<', html)
+                  if matches:
+                      count_str = matches[-1].replace(',', '')
+                      count_int = int(count_str)
+                      formatted = f'{count_int:06,d}'
+                      print(f'Fetched count: {count_int} -> {formatted}')
+
+                      with open('assets/profile-views.svg', 'r') as f:
+                          svg = f.read()
+
+                      lead_zeros = len(formatted) - len(str(count_int))
+                      pattern = r'(<text id=\"profile-views-count\"[^>]*>).*?(</text>)'
+                      new_inner = f'<tspan fill=\"#5C1029\">{formatted[:lead_zeros]}</tspan><tspan fill=\"#E8E6E8\">{formatted[lead_zeros:]}</tspan> <tspan font-size=\"8\" font-weight=\"600\" letter-spacing=\"1\" fill=\"#8B1E3F\">HITS</tspan>'
+                      new_svg = re.sub(pattern, rf'\g<1>{new_inner}\g<2>', svg)
+
+                      with open('assets/profile-views.svg', 'w') as f:
+                          f.write(new_svg)
+                      print('Updated assets/profile-views.svg successfully')
+          except Exception as e:
+              print(f'Update skipped or failed: {e}')
+          "
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/profile-views.svg
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(telemetry): update profile views count [skip ci]" && git push)
