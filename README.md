@@ -1,6 +1,6 @@
 <div align="center">
 
-<p align="left"><img src="assets/profile-views.svg" alt="Profile Ingress Telemetry &amp; Views"/></p>
+<p align="left"><img src="assets/profile-views.svg?v=2" alt="Profile Ingress Telemetry &amp; Views"/></p>
 <img src="assets/hero.svg" width="100%" alt="r41n // 0xraiven — Offensive Security · Security Engineering · Cloud" />
 
 <!-- MINIMAL ANIMATED TELEMETRY STREAM COMPONENT -->
@@ -18,10 +18,10 @@
 
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <td width="100%" valign="top">
       <h4><a href="https://github.com/0xraiven/phishGuard">01 / phishGuard</a> &nbsp;<img src="assets/badge-phishguard.svg" height="19" alt="v1.0-rc.1 · Apache-2.0" valign="middle" /></h4>
       <p>Privacy-first ML phishing detection platform &amp; Chrome extension. Defense-in-depth pipeline decoupling URL canonicalization, heuristics, and CatBoost inference with SHAP explainability.</p>
-      <p><img src="assets/phishguard-tags.svg" width="100%" alt="Python · Flask · CatBoost ML · SHAP (XAI) · Chrome MV3" /></p>
+      <p><img src="assets/phishguard-tags.svg" alt="Python · Flask · CatBoost ML · SHAP (XAI) · Chrome MV3" /></p>
       <p><a href="https://github.com/0xraiven/phishGuard"><b><font color="#E8E6E8">VIEW CODEBASE</font></b> &nbsp;<font color="#B8325A">──▶</font></a></p>
       <!-- Interactive Pipeline Inspection Drawer -->
       <details>
@@ -30,10 +30,12 @@
         <img src="assets/phishguard-pipeline.svg" width="100%" alt="phishGuard ML Pipeline Architecture" />
       </details>
     </td>
-    <td width="50%" valign="top">
+  </tr>
+  <tr>
+    <td width="100%" valign="top">
       <h4><a href="https://github.com/0xraiven/persistHunt">02 / persistHunt</a> &nbsp;<img src="assets/badge-persisthunt.svg" height="19" alt="Stage 1 · Active Engine" valign="middle" /></h4>
       <p>Linux persistence detection framework. Standardizes host anomaly telemetry across cron schedules, systemd service units, and shell environment initialization vectors.</p>
-      <p><img src="assets/persisthunt-tags.svg" width="100%" alt="Python 3 · Linux Internals · Host Telemetry · Audit Engine" /></p>
+      <p><img src="assets/persisthunt-tags.svg" alt="Python 3 · Linux Internals · Host Telemetry · Audit Engine" /></p>
       <p><a href="https://github.com/0xraiven/persistHunt"><b><font color="#E8E6E8">VIEW CODEBASE</font></b> &nbsp;<font color="#B8325A">──▶</font></a></p>
       <!-- Interactive Finding Model Inspection Drawer -->
       <details>
