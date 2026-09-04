@@ -5,12 +5,14 @@
 
 <!-- MINIMAL ANIMATED TELEMETRY STREAM COMPONENT -->
 <img src="assets/status-ticker.svg" width="100%" alt="Live Telemetry Stream" />
-<img src="assets/divider.svg" width="100%" alt="divider" />
+<br>
 
 <p align="center">
   <b>Cybersecurity researcher &amp; systems engineer</b> exploring <b>offensive primitives</b>, <b>Linux host telemetry</b>, and <b>explainable detection pipelines</b>.<br/>
   <sub>Dissecting attack surfaces down to daemon and initialization vectors to engineer inspectable, high-resilience security systems.</sub>
 </p>
+
+<img src="assets/divider.svg" width="100%" alt="divider" />
 
 </div>
 
